@@ -7,6 +7,15 @@ import Link from "next/link";
 const Footer = () => {
   const [hoveredSocial, setHoveredSocial] = useState(null);
 
+  const quickLinks = [
+    {label:"Home", href:"/" },
+    {label:"About", href:"/about" },
+    {label:"Services", href:"/service" },
+    {label:"Contact", href:"/#contact" },
+    {label:"Our Location", href:"/digital-marketing-company-in-dwarka" },
+
+  ]
+
   const socialLinks = [
     { icon: Globe, name: "Website", link: "#", color: "blue" },
     { icon: Facebook, name: "Facebook", link: "https://www.facebook.com/share/1CpGGMsDTh/", color: "blue" },
@@ -56,12 +65,12 @@ Visit our office or contact us using the details below. Our team is always ready
           <div className="md:col-span-2">
             <h4 className="text-gray-900 font-semibold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About", "Services", "Contact"].map((link, i) => (
+              {quickLinks.map((link, i) => (
                 <li key={i} className="group cursor-pointer">
-                  <a href="#" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                  <Link href={link.href} className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                     <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-                    <span className="group-hover:font-semibold transition-all">{link}</span>
-                  </a>
+                    <span className="group-hover:font-semibold transition-all">{link.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -72,38 +81,38 @@ Visit our office or contact us using the details below. Our team is always ready
             <h4 className="text-gray-900 font-semibold mb-6 text-lg">Our Services</h4>
              <ul className="space-y-3">
               <li className="group cursor-pointer">
-                <Link href="/web-development" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/website-development-company-in-jankpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">Web Development</span>
                 </Link>
               </li>
               
               <li className="group cursor-pointer">
-                <Link href="/seo-servies" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/seo-company-in-janakpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">SEO Services</span>
                 </Link>
               </li>
               <li className="group cursor-pointer">
-                <Link href="/social-media-marketing" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/social-media-marketing-company-in-janakpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">Social Media Marketing</span>
                 </Link>
               </li>
               <li className="group cursor-pointer">
-                <Link href="/ppc-advertising" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/ppc-advertising-company-in-janakpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">PPC Advertising</span>
                 </Link>
               </li>
               <li className="group cursor-pointer">
-                <Link href="/graphic-design" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/graphic-design-company-in-janakpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">Graphic Design</span>
                 </Link>
               </li>
               <li className="group cursor-pointer">
-                <Link href="/it-services" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
+                <Link href="/it-support-and-maintenance-in-janakpuri" className="text-gray-600 group-hover:text-blue-600 transition-colors text-sm flex items-center gap-2 group-hover:translate-x-1 transform transition-transform">
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                   <span className="group-hover:font-semibold transition-all">IT Services</span>
                 </Link>
@@ -147,7 +156,7 @@ Visit our office or contact us using the details below. Our team is always ready
         {/* Bottom Bar */}
         <div className=" gap-4 pt-8 border-t border-blue-200">
           <p className="text-gray-600 text-sm text-center">
-            © 2024 Rehoboth Digitech Solution. All rights reserved.
+            © 2022 Rehoboth Digitech Solution. All rights reserved.
           </p>
           
           

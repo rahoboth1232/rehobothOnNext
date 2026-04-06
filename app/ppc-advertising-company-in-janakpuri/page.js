@@ -7,6 +7,7 @@ import {
   MousePointer, Globe, Instagram, Facebook, ChevronDown,
 } from "lucide-react";
 import Contact from "../components/Contact";
+import Link from "next/link";
 
 /* ─── Data ───────────────────────────────────────────────────── */
 const services = [
@@ -30,7 +31,7 @@ const whyUs = [
 
 const stats = [
   { value: "200+", label: "Campaigns Run",     Icon: Target    },
-  { value: "2+",   label: "Years Active",      Icon: Award     },
+  { value: "4+",   label: "Years Active",      Icon: Award     },
   { value: "95%",  label: "Client Retention",  Icon: CheckCircle2 },
   { value: "3×",   label: "Avg. ROI Lift",     Icon: TrendingUp },
 ];
@@ -384,12 +385,16 @@ export default function PPCPage() {
               Looking for a PPC advertising agency near Janakpuri? We are here to help local and regional businesses grow.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Janakpuri","West Delhi","Delhi NCR","Dwarka","Uttam Nagar","Vikaspuri","Punjabi Bagh"].map(area => (
-                <span key={area} className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase px-4 py-2 rounded-full">
-                  <MapPin size={11} /> {area}
-                </span>
-              ))}
-            </div>
+  {["Janakpuri","West Delhi","Delhi NCR","Dwarka","Uttam Nagar","Vikaspuri","Punjabi Bagh"].map(area => (
+    <Link
+      key={area}
+      href={`/${area.toLowerCase().replace(/\s+/g, "-")}`}
+      className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase px-4 py-2 rounded-full hover:bg-blue-100 transition"
+    >
+      <MapPin size={11} /> {area}
+    </Link>
+  ))}
+</div>
           </div>
         </section>
 

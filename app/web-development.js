@@ -42,6 +42,7 @@ import {
   X,
 } from "lucide-react";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
 // ─── DESIGN TOKENS ────────────────────────────────────────────────────────────
@@ -93,7 +94,6 @@ const HERO_SERVICES = [
   { icon: Monitor,     name: "Custom Website Development" },
   { icon: Smartphone,  name: "Responsive Web Design" },
   { icon: Search,      name: "SEO-Friendly Development" },
-  { icon: Code2,       name: "WordPress Development" },
   { icon: Zap,         name: "Speed Optimization" },
   { icon: ShieldCheck, name: "Website Maintenance" },
 ];
@@ -645,6 +645,7 @@ export default function WebDevelopment() {
 
           <Contact/>
         </section>
+         <WhatsAppButton/>
 
       
       </div>

@@ -7,9 +7,10 @@ import {
   ArrowUpRight, ImageIcon,
 } from "lucide-react";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
-/* ─── Palette ──────────────────────────────────────────────── */
+
 const P = {
   navy:    "#0B2D6B",
   navyMid: "#1040A0",
@@ -33,9 +34,9 @@ const services = [
 ];
 
 const stats = [
-  { value: 500, suffix: "+", label: "Projects Delivered", Icon: Award },
-  { value: 200, suffix: "+", label: "Happy Clients",       Icon: Users },
-  { value: 5,   suffix: "★", label: "Avg Client Rating",  Icon: Star  },
+  { value: 290, suffix: "+", label: "Projects Delivered", Icon: Award },
+  { value: 250, suffix: "+", label: "Happy Clients",       Icon: Users },
+  { value: 4.8,   suffix: "★", label: "Avg Client Rating",  Icon: Star  },
   { value: 48,  suffix: "h", label: "First Draft",         Icon: Zap   },
 ];
 
@@ -59,6 +60,7 @@ const whyUs = [
 function Counter({ target, suffix = "" }) {
   const [n, setN] = useState(0);
   const ref = useRef(null);
+
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => {
       if (!e.isIntersecting) return;
@@ -139,7 +141,7 @@ export default function GraphicDesign() {
       
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
-      <section style={{ position:"relative",overflow:"hidden",background:`linear-gradient(148deg,${P.navy} 0%,${P.navyMid} 52%,${P.blue} 100%)`,minHeight:"90vh",display:"flex",alignItems:"center" }}>
+      <section style={{ position:"relative",overflow:"hidden",background:`linear-gradient(148deg,${P.navy} 0%,${P.navyMid} 52%,${P.blue} 100%)`,minHeight:"90vh",display:"flex",alignItems:"center",marginTop:"70px"}}>
         <div className="gtex" style={{ position:"absolute",inset:0,opacity:.55 }} />
         {/* Blobs */}
         <div style={{ position:"absolute",top:"-18%",right:"28%",width:480,height:480,background:"rgba(96,165,250,.08)",borderRadius:"50%",filter:"blur(64px)",pointerEvents:"none" }} />
@@ -181,7 +183,7 @@ export default function GraphicDesign() {
 
             {/* RIGHT */}
             <div className="hero-float" style={{ position:"relative" }}>
-              <Img src="/images/graphic-design-hero.jpg" alt="Design workspace"
+              <Img src="/graphic.jpg" alt="Design workspace"
                 style={{ height:470,borderRadius:20,boxShadow:"0 40px 80px rgba(0,0,0,.32)",border:"1px solid rgba(255,255,255,.07)" }} />
               <div style={{ position:"absolute",bottom:0,left:0,right:0,height:"35%",background:`linear-gradient(to top,${P.navy}99,transparent)`,borderRadius:"0 0 20px 20px",pointerEvents:"none" }} />
               {/* Badge bottom-left */}
@@ -191,7 +193,7 @@ export default function GraphicDesign() {
               </div>
               {/* Badge top-right */}
               <div style={{ position:"absolute",top:18,right:-18,background:`linear-gradient(135deg,${P.navy},${P.blue})`,borderRadius:12,padding:"10px 18px",boxShadow:`0 8px 22px rgba(11,45,107,.35)` }}>
-                <div style={{ fontSize:11,fontWeight:800,color:P.white,letterSpacing:".04em" }}>500+ Projects</div>
+                <div style={{ fontSize:11,fontWeight:800,color:P.white,letterSpacing:".04em" }}>100+ Projects</div>
                 <div style={{ fontSize:9,color:"rgba(255,255,255,.45)",marginTop:2 }}>Delhi NCR</div>
               </div>
             </div>
@@ -361,7 +363,7 @@ export default function GraphicDesign() {
         </div>
       </section>
 
-      {/* ══ PROCESS ═══════════════════════════════════════════ */}
+     
       <section id="process" style={{ background:P.white,padding:"92px 0" }}>
         <div style={{ maxWidth:1160,margin:"0 auto",padding:"0 28px" }}>
           <div style={{ textAlign:"center",marginBottom:56 }}>
@@ -393,6 +395,7 @@ export default function GraphicDesign() {
         </div>
       </section>
 <Contact/>
+ <WhatsAppButton/>
       
     </div>
   );

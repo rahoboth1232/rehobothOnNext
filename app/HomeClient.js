@@ -6,9 +6,11 @@ import AboutUs from "./components/AboutUs";
 import FAQ from "./components/FAQ";
 import Testimonals from "./components/Testimonals";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+
 
   const faqs = [
     {
@@ -28,6 +30,7 @@ const Home = () => {
         "Yes! We offer monthly maintenance and 24/7 IT support packages to ensure your business stays running smoothly.",
     },
     {
+      
       question: "Do you offer SEO services for local businesses in Janakpuri?",
       answer:
         "Yes, as a professional SEO company in Janakpuri, we help local businesses rank higher on Google, attract organic traffic, and get quality leads through ethical SEO practices.",
@@ -98,7 +101,7 @@ const Home = () => {
             </p>
 
             <a
-              href="/contact"
+              href="#contact"
               className="inline-block mt-8 text-white bg-[#003366] rounded-full py-3 px-8 hover:bg-blue-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Get Started
@@ -126,7 +129,7 @@ If you are looking for a dependable digital marketing company in Delhi that work
     </p>
   </div>
 </div>
-      <Testimonals /> <Contact /> <FAQ faq={faqs} />
+     <Testimonals /> <Contact /> <FAQ faq={faqs} /> <WhatsAppButton/>
     </>
   );
 };

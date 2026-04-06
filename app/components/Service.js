@@ -78,9 +78,7 @@ const ServiceCard = memo(function ServiceCard({ service }) {
   );
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Main Services Section
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 const Services = () => {
   const services = [
@@ -99,7 +97,7 @@ const Services = () => {
       title: "SEO Services,",
       description:
         "Our SEO services help your website rank higher on Google and attract organic traffic. As a reliable SEO company in Janakpuri, Delhi. We focus on keyword optimization, on-page SEO, technical improvements, and content strategies that bring sustainable results.",
-      image: "/Digital.jpeg",
+      image: "/social-media.jpg",
       tech: ["SEO", "Google Ads", "Analytics", "Social Media"],
       links: [{ label: "explore", href: "/seo-service" }],
     },

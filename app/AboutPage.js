@@ -23,6 +23,9 @@ import {
 } from "lucide-react";
 import Contact from "./components/Contact";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Testimonials from "./components/Testimonals";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 /* ─────────────────────────────────────────
    CountUp hook
@@ -136,7 +139,6 @@ const VALUES = [
   { icon: Users, title: "Partnership", desc: "Your growth is our success — we're invested in your outcomes." },
   { icon: Shield, title: "Ethics", desc: "White-hat practices, honest communication, zero shortcuts." },
   { icon: Eye, title: "Clarity", desc: "Clear reports and communication — no jargon, no surprises." },
-  { icon: CheckCircle, title: "Reliability", desc: "Consistent support and accountability at every stage." },
 ];
 
 const APPROACH = [
@@ -640,12 +642,7 @@ const AboutPage = () => {
                     </a>
                 </button>
                 
-                <button className="rds-btn-outline">
-                   <a href="#services">
-                        View Our Services
-                    </a>
                
-                </button>
               </div>
             </div>
           </div>
@@ -1138,7 +1135,8 @@ const AboutPage = () => {
         </Section>
 
         <Contact/>
-
+        <Testimonials/>
+       <WhatsAppButton/>
       </div>
     </>
   );

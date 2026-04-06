@@ -12,7 +12,15 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,7 +28,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -86,59 +94,64 @@ const Navbar = () => {
         }`}
       >
         <div className="">
-          <div className="flex items-center justify-between px-8 py-4 bg-[#F9F8F6] shadow-md w-full"
-          style={{background:"var"}}
+          <div
+            className="flex items-center justify-between px-8 py-4 bg-[#F9F8F6] shadow-md w-full"
+            style={{ background: "var" }}
           >
             <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer group">
-              <link></link>
-              <div className="flex items-center gap-4">
-                {/* RD Logo Icon */}
-               <img src="/navlogo.png" alt="navlogo,IT company in Delhi" className="w-15" />
-                {/* Typography */}
-                <div className="flex flex-col" style={{ gap: "2px" }}>
-                  <div
-                    className="text-gray-900"
-                    style={{
-                      fontSize: "24px",
-                      fontWeight: 700,
-                      fontFamily: "system-ui, -apple-system, sans-serif",
-                      letterSpacing: "-0.02em",
-                      lineHeight: "1",
-                    }}
-                  >
-                    Rehoboth
-                  </div>
-                  <div
-                    className="flex items-center"
-                    style={{ gap: "6px", marginLeft: "1px" }}
-                  >
+              <div className="flex items-center gap-3 cursor-pointer group">
+                <link></link>
+                <div className="flex items-center gap-4">
+                  {/* RD Logo Icon */}
+                  <img
+                    src="/navlogo.png"
+                    alt="navlogo,IT company in Delhi"
+                    className="w-15"
+                  />
+                  {/* Typography */}
+                  <div className="flex flex-col" style={{ gap: "2px" }}>
                     <div
+                      className="text-gray-900"
                       style={{
-                        width: "20px",
-                        height: "1.5px",
-                        background:
-                          "linear-gradient(90deg, #3b82f6 0%, transparent 100%)",
-                      }}
-                    ></div>
-                    <div
-                      className="text-blue-600"
-                      style={{
-                        fontSize: "11px",
+                        fontSize: "24px",
                         fontWeight: 700,
                         fontFamily: "system-ui, -apple-system, sans-serif",
-                        letterSpacing: "0.2em",
+                        letterSpacing: "-0.02em",
                         lineHeight: "1",
-                        textTransform: "uppercase",
                       }}
                     >
-                      DigiTech
+                      Rehoboth
+                    </div>
+                    <div
+                      className="flex items-center"
+                      style={{ gap: "6px", marginLeft: "1px" }}
+                    >
+                      <div
+                        style={{
+                          width: "20px",
+                          height: "1.5px",
+                          background:
+                            "linear-gradient(90deg, #3b82f6 0%, transparent 100%)",
+                        }}
+                      ></div>
+                      <div
+                        className="text-blue-600"
+                        style={{
+                          fontSize: "11px",
+                          fontWeight: 700,
+                          fontFamily: "system-ui, -apple-system, sans-serif",
+                          letterSpacing: "0.2em",
+                          lineHeight: "1",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        DigiTech
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-</Link>
+            </Link>
             {/* Nav Links */}
             <ul className="flex items-center gap-10 font-medium text-gray-700">
               <li>
@@ -159,65 +172,87 @@ const Navbar = () => {
               </li>
 
               <li className="relative group">
-  <button className="relative py-2 hover:text-blue-600 transition-colors duration-300">
-    Service <FontAwesomeIcon icon={faCaretDown} />
-  </button>
+                <button className="relative flex items-center py-2 hover:text-blue-600 transition-colors duration-300">
+                  Services <FontAwesomeIcon icon={faCaretDown} />
+                </button>
 
-  {/* Dropdown */}
-  <div className="absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-    <ul className="py-2 text-gray-700">
-      <li>
-        <Link
-          href="/web-development"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-          Web Development
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/seo-service"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-          SEO
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/social-media-marketing"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-          social media Marketing
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/ppc-advertising"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-          PPC Advertising
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/graphic-design"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-         Graphic design
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/it-support"
-          className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-        >
-          It Solution & maintenance
-        </Link>
-      </li>
-    </ul>
-  </div>
-</li>
-  <li>
+                {/* Dropdown */}
+                <div className="absolute left-0 top-full mt-2 w-[300px] bg-white rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <ul className="py-2 text-gray-700 text-sm">
+                    <li>
+                      <Link
+                        href="/website-development-company-in-jankpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        Web Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/seo-company-in-janakpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        SEO
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/social-media-marketing-company-in-janakpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        Social Media Marketing
+                      </Link>{" "}
+                    </li>
+                    <li>
+                      <Link
+                        href="/ppc-advertising-company-in-janakpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        PPC Advertising
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/graphic-design-company-in-janakpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        Graphic design
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/it-support-and-maintenance-in-janakpuri"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        IT Solution & maintenance
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+
+              <li className="relative group">
+                <button className="relative flex items-center py-2 hover:text-blue-600 transition-colors duration-300">
+                  Our Location 
+                </button>
+
+                {/* Dropdown */}
+                <div className="absolute left-0 top-full mt-2 w-[300px] bg-white rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <ul className="py-2 text-gray-700 text-sm">
+                    <li>
+                      <Link
+                        href="/digital-marketing-company-in-dwarka"
+                        className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                      >
+                        Dwarka
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
                 <Link
                   href="/f&q"
                   className="relative py-2 hover:text-blue-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
@@ -233,15 +268,14 @@ const Navbar = () => {
                   Contact
                 </a>
               </li>
-             
-            
+
+              
             </ul>
 
             {/* CTA Button */}
             <button className="bg-[#003366] text-white rounded-full py-2.5 px-7 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
               <a href="#contact">Contact US</a>
             </button>
-        
           </div>
         </div>
       </nav>
@@ -252,7 +286,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between px-5 py-3 bg-[#F9F8F6] rounded-2xl shadow-lg">
             {/* Logo */}
             <div className="flex items-center gap-2">
-                 <img src='/navlogo.png' alt="navlogo" className="w-10" />
+              <img src="/navlogo.png" alt="navlogo" className="w-10" />
               {/* Typography */}
               <div className="flex flex-col" style={{ gap: "2px" }}>
                 <div
@@ -323,7 +357,7 @@ const Navbar = () => {
               <ul className="py-3">
                 <li>
                   <Link
-                    href='/'
+                    href="/"
                     onClick={() => setMenu(false)}
                     className="block py-3 px-6 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                   >
@@ -348,12 +382,12 @@ const Navbar = () => {
                     Service
                   </Link>
                 </li>
-              
+
                 <li>
                   <Link
                     href="/fAq"
                     className="block py-3 px-6 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                     onClick={() => setMenu(false)}
+                    onClick={() => setMenu(false)}
                   >
                     F&Q
                   </Link>

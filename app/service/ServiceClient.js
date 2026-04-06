@@ -85,8 +85,7 @@ const services = [
       "Analytics & reporting",
     ],
     links: [
-      { label: "SEO Services", href: "/seo-service" },
-      { label: "Social Media", href: "/social-media-marketing" },
+      { label: "SEO Services", href: "/seo-service" }
     ],
     tag: "Marketing",
   },

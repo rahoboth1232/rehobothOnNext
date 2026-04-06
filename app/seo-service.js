@@ -8,6 +8,8 @@ import {
   Users, Shield, Target,
 } from "lucide-react";
 import Contact from "./components/Contact";
+import Link from "next/link";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
 /* ─── Data ───────────────────────────────────────────────────── */
@@ -421,18 +423,23 @@ export default function SEOPage() {
             <p className="text-slate-500 text-sm mb-8 max-w-md mx-auto">
               We provide SEO services across West Delhi and Delhi NCR — helping businesses expand their online presence locally and regionally.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {["Janakpuri","West Delhi","Dwarka","Uttam Nagar","Vikaspuri","Punjabi Bagh","Delhi NCR"].map(area => (
-                <span key={area} className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase px-4 py-2 rounded-full">
-                  <MapPin size={11} /> {area}
-                </span>
-              ))}
-            </div>
+           <div className="flex flex-wrap justify-center gap-3">
+            {["Janakpuri","West Delhi","Delhi NCR","Dwarka","Uttam Nagar","Vikaspuri","Punjabi Bagh"].map(area => (
+              <Link
+                key={area}
+                href={`/${area.toLowerCase().replace(/\s+/g, "-")}`}
+                className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase px-4 py-2 rounded-full hover:bg-blue-100 transition"
+              >
+                <MapPin size={11} /> {area}
+              </Link>
+            ))}
+          </div>
           </div>
         </section>
 
        <Contact/>
       </main>
+       <WhatsAppButton/>
 
     
     </div>

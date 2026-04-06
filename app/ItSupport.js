@@ -18,6 +18,7 @@ import {
   Activity, Clock, Users, Menu, X, Globe, BarChart2,
 } from "lucide-react";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
 
@@ -77,7 +78,7 @@ const stats = [
   { value: "100+", label: "Clients Served", icon: Users },
   { value: "99.9%", label: "Uptime Guarantee", icon: Activity },
   { value: "< 1hr", label: "Avg Response Time", icon: Clock },
-  { value: "2+", label: "Years Experience", icon: Star },
+  { value: "4", label: "Years Experience", icon: Star },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -223,63 +224,9 @@ export default function ITSupportPage() {
         footer a:hover { color: #93c5fd; }
       `}</style>
 
-      {/* ── Skip Link ── */}
-      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[999] focus:bg-blue-700 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
-        Skip to main content
-      </a>
-
-      {/* ── Top Bar ── */}
-      <div className="navy-grad text-white text-xs font-semibold text-center py-2.5 tracking-wide">
-        📍 Serving Janakpuri, West Delhi &amp; Delhi NCR —{" "}
-        <a href="#contact" className="underline underline-offset-2 hover:opacity-80 transition-opacity">Get Free IT Consultation →</a>
-      </div>
-
-      {/* ── Header ── */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm" role="banner">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-
-          <a href="/" aria-label="IT Support Janakpuri" className="flex items-center gap-2.5 shrink-0">
-            <div className="w-9 h-9 navy-grad rounded-xl flex items-center justify-center shadow-md">
-              <Shield className="h-4 w-4 text-white" />
-            </div>
-            <div className="leading-none">
-              <span className="block font-black text-slate-900 text-sm tracking-tight" style={{ fontFamily: "'Fraunces', serif" }}>TechGuard</span>
-              <span className="block text-blue-600 text-[10px] font-semibold tracking-widest uppercase">IT Solutions · Janakpuri</span>
-            </div>
-          </a>
-
-          <nav className="hidden md:flex items-center gap-7" aria-label="Primary navigation">
-            {[["Services","#services"],["Process","#process"],["Industries","#industries"],["Why Us","#why-us"],["FAQs","#faqs"],["Contact","#contact"]].map(([l,h])=>(
-              <a key={l} href={h} className="nav-link">{l}</a>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <Button asChild className="hidden sm:flex navy-grad text-white border-0 hover:opacity-90 shadow-lg shadow-blue-200 anim-pulse font-bold text-sm px-5">
-              <a href="tel:+911234567890"><Phone className="h-3.5 w-3.5 mr-2" /> Call Now</a>
-            </Button>
-            <button
-              className="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
-        </div>
-
-        {menuOpen && (
-          <div className="md:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-1">
-            {[["Services","#services"],["Process","#process"],["Industries","#industries"],["Why Us","#why-us"],["FAQs","#faqs"],["Contact","#contact"]].map(([l,h])=>(
-              <a key={l} href={h} onClick={()=>setMenuOpen(false)} className="block py-2.5 px-3 rounded-lg font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm">{l}</a>
-            ))}
-            <Button asChild className="w-full mt-3 navy-grad text-white border-0 font-bold">
-              <a href="tel:+911234567890"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
-            </Button>
-          </div>
-        )}
-      </header>
-
+    
+    
+      
       <main id="main">
 
         {/* ══════════════════════════════════════════
@@ -528,6 +475,7 @@ export default function ITSupportPage() {
                   value={`faq-${i}`}
                   className="bg-white border border-slate-200 rounded-xl px-5 data-[state=open]:border-blue-300 data-[state=open]:shadow-md data-[state=open]:shadow-blue-100 transition-all"
                   itemScope
+                  itemProp="mainEntity"
                   itemType="https://schema.org/Question"
                 >
                   <AccordionTrigger className="text-sm font-bold text-slate-800 hover:text-blue-700 hover:no-underline py-4 text-left" itemProp="name">
@@ -544,8 +492,7 @@ export default function ITSupportPage() {
 
 <Contact/>
       </main>
-
-      {/* ── Footer ── */}
+ <WhatsAppButton/>
     
     </div>
   );

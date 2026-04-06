@@ -7,6 +7,7 @@ import {
   CheckCircle2, Star, Sparkles, Linkedin,
 } from "lucide-react";
 import Contact from "../components/Contact";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const offerings = [
   { Icon: Calendar,  title: "Strategy & Planning",           desc: "We optimize your social media profiles with the right descriptions, visuals, and branding. Proper optimization helps your profiles look professional and improves discoverability across social platforms.", tag: "Foundation" },
@@ -468,7 +469,7 @@ As an experienced social media marketing agency in Janakpuri, Delhi, we focus on
       <Contact/>
       </main>
 
-    
+     <WhatsAppButton/>
     </div>
   );
 }

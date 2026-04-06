@@ -8,50 +8,39 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Raghav Singh",
-      role: "Startup Founder",
+      name: "indianpost",
       company: "TechVenture Inc.",
-      image: "https://i.pravatar.cc/150?img=12",
+      image: "indianpost.jpeg",
       rating: 5,
       text: "Rehoboth completely transformed our workflow. The speed, reliability, and support are unmatched. Their team went above and beyond to deliver exactly what we needed.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       name: "Pratiksha Gupta",
-      role: "Product Manager",
+     
       company: "InnovateCo",
-      image: "https://i.pravatar.cc/150?img=45",
+      image: "dva.jpeg",
       rating: 5,
       text: "Their design quality and development speed helped us launch our product 3x faster. The attention to detail and professionalism was outstanding throughout the entire process.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      name: "Michael Lee",
-      role: "Tech Entrepreneur",
-      company: "Digital Solutions",
-      image: "https://i.pravatar.cc/150?img=33",
+      name: "kapdewallah",
+      company: "kapdewallah",
+      image: "kapdewallah.png",
       rating: 5,
       text: "From UI/UX to deployment, Rehoboth delivered everything perfectly. Highly recommended! They truly understand modern web development and business needs.",
       gradient: "from-indigo-500 to-blue-500"
     },
     {
-      name: "Ruhi Goinka",
-      role: "Marketing Director",
+      name: "vmart",
       company: "GrowthHub",
-      image: "https://i.pravatar.cc/150?img=47",
+      image: "vmart.png",
       rating: 5,
       text: "Working with Rehoboth was a game-changer for our digital presence. Their strategic approach and creative solutions exceeded all our expectations.",
       gradient: "from-teal-500 to-emerald-500"
     },
-    {
-      name: "David Chen",
-      role: "CEO",
-      company: "StartupLabs",
-      image: "https://i.pravatar.cc/150?img=68",
-      rating: 5,
-      text: "The team's expertise in both design and development is remarkable. They transformed our vision into reality with precision and creativity.",
-      gradient: "from-orange-500 to-red-500"
-    }
+  
   ];
 
   const nextTestimonial = () => {
@@ -114,7 +103,7 @@ const Testimonials = () => {
                 />
                 <div>
                   <h4 className="font-bold text-xl text-gray-900">{testimonials[activeIndex].name}</h4>
-                  <p className="text-blue-600 font-medium">{testimonials[activeIndex].role}</p>
+                  
                   <p className="text-gray-500 text-sm">{testimonials[activeIndex].company}</p>
                 </div>
               </div>

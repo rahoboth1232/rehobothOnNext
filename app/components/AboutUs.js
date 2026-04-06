@@ -94,7 +94,7 @@ const About = () => {
         <div className="grid grid-cols-2 gap-6">
           <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center hover:shadow-lg transition">
             <h3 className="text-4xl font-bold text-[#003366]">
-              <CountUp end={1} />
+              <CountUp end={4} />
             </h3>
             <p className="text-gray-600 mt-2">Years Experience</p>
           </div>
@@ -108,7 +108,7 @@ const About = () => {
 
           <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center hover:shadow-lg transition">
             <h3 className="text-4xl font-bold text-[#003366]">
-              <CountUp end={50} />+
+              <CountUp end={250} />+
             </h3>
             <p className="text-gray-600 mt-2">Happy Clients</p>
           </div>

@@ -1,5 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import Faq from "../components/FAQ";
+import Contact from "../components/Contact";
 
 
 export const metadata = {
@@ -43,6 +44,7 @@ export default function FaqPage() {
   return (
     <PageWrapper offset={true}>
       <Faq faq={servicesFaq} />
+      <Contact/>
     </PageWrapper>
   );
 }
